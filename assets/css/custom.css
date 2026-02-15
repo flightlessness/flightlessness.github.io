@@ -9,3 +9,20 @@ main {
   max-width: 720px;
   margin: 0 auto;
 }
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.8rem;
+  color: #ff6600;
+  text-decoration: none;
+}
+
+.rss-icon {
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.rss-link:hover {
+  opacity: 0.7;
+}
