@@ -1,1 +1,16 @@
+<li class="post-card">
+  <a class="post-card-link" href="{{ post.url }}">
+    <h3 class="post-card-title">{{ post.title }}</h3>
+  </a>
 
+  <div class="post-card-meta">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+    {% if post.type %}
+      · <a class="post-type" href="/{{ post.type | downcase | replace: ' ', '-' }}/">{{ post.type | capitalize }}</a>
+    {% endif %}
+  </div>
+
+  {% if post.excerpt %}
+    <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+  {% endif %}
+</li>
