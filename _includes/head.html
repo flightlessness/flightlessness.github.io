@@ -1,1 +1,21 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<title>
+  {% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}
+</title>
+
+{% if site.description %}
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate:160 }}">
+{% endif %}
+
+<link rel="stylesheet" href="/assets/css/custom.css">
+
+<!-- RSS feed discovery -->
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
+
+<!-- Basic Open Graph (optional but helpful for social previews) -->
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.excerpt | strip_html | truncate:160 | default: site.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
