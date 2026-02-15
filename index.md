@@ -25,7 +25,6 @@ permalink: /
 
 <ul class="category-menu">
   <li><a href="/test/">Test</a></li>
-  <li><a href="/hotel/">Hotel</a></li>
   <li><a href="/image/">Image</a></li>
 </ul>
 
