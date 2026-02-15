@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Test
-permalink: /testing/
+permalink: /test/
 ---
 
-<h1>Testing</h1>
+<h1>Test</h1>
 
 <ul class="post-list">
-  {% assign posts = site.posts | where: "type", "testing" | sort: "date" | reverse %}
+  {% assign posts = site.posts | where: "type", "test" | sort: "date" | reverse %}
   {% for post in posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
