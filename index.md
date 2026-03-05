@@ -28,8 +28,6 @@ permalink: /
   <li><a href="/image/">Image</a></li>
 </ul>
 
-Welcome to my blog.
-
 {% for post in site.posts %}
 - [{{ post.title }}]({{ post.url }})
 {% endfor %}
