@@ -4,7 +4,7 @@ title: Test
 permalink: /test/
 ---
 
-<h1>Test</h1>
+<h3>Test</h3>
 
 <ul class="post-list">
   {% assign posts = site.posts | where: "type", "test" | sort: "date" | reverse %}
