@@ -1,7 +1,30 @@
 ---
-layout: default
+layout: category
 title: Test
 permalink: /test/
+
+# SEO
+description: Posts categorized under Test.
+keywords: [test, experiments, drafts]
+canonical_url: https://flightlessness.github.io/test/
+
+# Display options
+intro: Experimental posts and development notes.
+cover_image: /assets/images/test-banner.jpg
+
+# Behavior flags
+show_date: true
+show_post_count: true
+hidden: false
+
+# Navigation ordering
+nav_order: 3
+
+# Optional custom styling
+body_class: category-test
+
+# Future-proofing
+paginate: 10
 ---
 
 <h1>{{ page.title }}</h1>
