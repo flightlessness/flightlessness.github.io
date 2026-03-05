@@ -4,7 +4,7 @@ title: Home
 permalink: /
 ---
 
-<h1>Latest</h1>
+<h2>Latest</h2>
 
 <ul class="post-list">
   {% assign latest_posts = site.posts | sort: "date" | reverse | slice: 0, 10 %}
@@ -13,9 +13,6 @@ permalink: /
       <a href="{{ post.url }}">{{ post.title }}</a>
       <small>
         {{ post.date | date: "%b %-d, %Y" }}
-        {% if post.type %}
-          · <a href="/{{ post.type }}/">{{ post.type | capitalize }}</a>
-        {% endif %}
       </small>
     </li>
   {% endfor %}
