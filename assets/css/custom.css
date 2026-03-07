@@ -12,6 +12,11 @@ main {
   margin: 0 auto;
 }
 
+.theme-icon {
+  width: 24px;
+  height: 24px;
+}
+
 .theme-toggle:focus {
   outline: none;
 }
