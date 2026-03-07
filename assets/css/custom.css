@@ -12,6 +12,16 @@ main {
   margin: 0 auto;
 }
 
+.site-nav a,
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-footer a:hover {
+  opacity: 0.7;
+}
+
 /* color system: define variables for light mode */
 :root {
   --bg: #ffffff;
