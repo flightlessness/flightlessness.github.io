@@ -2,33 +2,34 @@ body {
   font-size: 36px;
   line-height: 1.7;
 }
+
 h1 { font-size: 2.2em; }
 h2 { font-size: 1.6em; }
 h3 { font-size: 1.3em; }
+
 main {
   max-width: 720px;
   margin: 0 auto;
 }
-.rss-link {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 0.8rem;
-  color: #ff6600;
-  text-decoration: none;
+
+.site-nav {
+  display: flex;
+  gap: 0.6rem;
+  padding: 1rem;
 }
 
-.rss-icon {
-  fill: currentColor;
-  stroke: currentColor;
-  stroke-width: 2;
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.rss-link:hover {
-  opacity: 0.7;
+.post-card {
+  margin-bottom: 1.4rem;
 }
-.site-nav { display:flex; align-items:center; gap:0.6rem; padding: 1rem; }
-.nav-right { margin-left:auto; }
-.rss-icon { fill: currentColor; stroke: currentColor; vertical-align: middle; }
-.post-list { list-style: none; margin: 0; padding: 0; }
-.post-card { margin-bottom: 1.4rem; }
-.site-footer { margin-top: 3rem; padding: 2rem 1rem; color:#666; }
+
+.site-footer {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  color: #666;
+}
