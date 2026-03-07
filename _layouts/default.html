@@ -56,7 +56,13 @@
 })();
 </script>
   
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+
+<body id="top">
 
   {% include nav.html %}
 
@@ -66,7 +72,9 @@
 
   {% include footer.html %}
 
-  {% comment %} optional analytics include, add if needed {% endcomment %}
+  <div id="bottom"></div>
+
   {% include analytics.html %}
+
 </body>
 </html>
