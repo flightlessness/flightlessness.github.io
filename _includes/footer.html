@@ -1,7 +1,10 @@
 <footer class="site-footer" role="contentinfo">
-  <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}.</p>
-  <nav class="footer-links">
-    <a href="/about/">About</a>
-    <a href="/feed.xml">RSS</a>
-  </nav>
+  <ul class="footer-list">
+    <li><a href="/about/">About</a></li>
+    <li><a href="/feed.xml">RSS</a></li>
+  </ul>
+
+  <p class="footer-meta">
+    &copy; {{ site.time | date: "%Y" }} {{ site.title }}.
+  </p>
 </footer>
