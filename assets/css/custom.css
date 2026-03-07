@@ -17,12 +17,16 @@ main {
   height: 24px;
 }
 
+.theme-toggle {
+  outline: none;
+}
+
 .theme-toggle:focus {
   outline: none;
 }
 
 .theme-toggle:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid #ff6600;   /* or a softer color */
   outline-offset: 2px;
 }
 
