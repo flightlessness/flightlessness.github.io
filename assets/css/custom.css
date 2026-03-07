@@ -12,6 +12,15 @@ main {
   margin: 0 auto;
 }
 
+.theme-toggle:focus {
+  outline: none;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .site-nav a,
 .site-footer a {
   text-decoration: none;
