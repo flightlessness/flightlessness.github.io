@@ -1,12 +1,30 @@
 <nav class="site-nav" aria-label="Main navigation">
+
   <div class="nav-left">
     <a href="/">Home</a>
     <a href="/about/">About</a>
-
-    <a href="#bottom">Bottom </a>
+    <a href="#bottom">Bottom</a>
   </div>
 
   <div class="nav-right">
+
+    <a href="/feed.xml"
+       class="rss-link"
+       aria-label="RSS"
+       title="RSS">
+
+      <svg class="rss-icon"
+           viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-linecap="round">
+        <path d="M4 12a8 8 0 0 1 8 8" />
+        <path d="M4 6a14 14 0 0 1 14 14" />
+        <circle cx="4" cy="20" r="3" fill="currentColor" stroke="none"/>
+      </svg>
+
+    </a>
+
     <button id="theme-toggle"
             class="theme-toggle"
             aria-pressed="false"
@@ -15,41 +33,12 @@
       <svg id="theme-toggle-icon"
            class="theme-icon"
            viewBox="0 0 24 24"
-           width="24"
-           height="24"
            fill="none"
            stroke="currentColor"
-           stroke-width="2"
-           stroke-linecap="round"
-           stroke-linejoin="round">
+           stroke-linecap="round">
       </svg>
     </button>
+
   </div>
+
 </nav>
-
-<a href="/feed.xml"
-   class="rss-link"
-   aria-label="RSS"
-   title="RSS">
-
-  <svg class="rss-icon"
-       viewBox="0 0 24 24"
-       width="28"
-       height="28"
-       fill="none"
-       stroke="currentColor"
-       stroke-width="3"
-       stroke-linecap="round">
-
-    <!-- inner arc -->
-    <path d="M4 12a8 8 0 0 1 8 8" />
-
-    <!-- outer arc -->
-    <path d="M4 6a14 14 0 0 1 14 14" />
-
-    <!-- dot -->
-    <circle cx="4" cy="20" r="3" fill="currentColor" stroke="none"/>
-
-  </svg>
-
-</a>
