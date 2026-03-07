@@ -119,3 +119,19 @@ a:hover { opacity: 0.85; }
   padding: 2rem 1rem;
   color: #666;
 }
+
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Light mode */
+.rss-icon {
+  color: #000000;
+}
+
+/* Dark mode */
+html.dark .rss-icon {
+  color: #ffffff;
+}
