@@ -12,9 +12,11 @@ main {
   margin: 0 auto;
 }
 
-.theme-icon {
-  width: 24px;
-  height: 24px;
+.theme-icon,
+.rss-icon {
+  width: 32px;
+  height: 32px;
+  stroke-width: 3;
 }
 
 .theme-toggle {
