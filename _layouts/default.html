@@ -3,64 +3,6 @@
 <head>
   {% include head.html %}
 </head>
-  
-<script>
-(function () {
-  const btn = document.getElementById('theme-toggle');
-  const icon = document.getElementById('theme-toggle-icon');
-
-  if (!btn || !icon) return;
-
-  // update button state and icon
-  function applyTheme(t) {
-    if (t === 'dark') {
-      document.documentElement.classList.add('dark');
-      btn.setAttribute('aria-pressed', 'true');
-      icon.textContent = '🌙'; // moon
-    } else {
-      document.documentElement.classList.remove('dark');
-      btn.setAttribute('aria-pressed', 'false');
-      icon.textContent = '☀️'; // sun
-    }
-  }
-
-  // determine initial theme: stored > system > light
-  function currentTheme() {
-    try {
-      const stored = localStorage.getItem('theme');
-      if (stored === 'dark' || stored === 'light') return stored;
-    } catch (e) {}
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-
-  // initialize UI
-  applyTheme(currentTheme());
-
-  // toggle handler
-  btn.addEventListener('click', function () {
-    const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-    try { localStorage.setItem('theme', next); } catch (e) {}
-    applyTheme(next);
-  });
-
-  // keep UI consistent if user changes system preference while page open
-  if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', e => {
-      // only follow system if user hasn't explicitly selected a theme
-      try {
-        const stored = localStorage.getItem('theme');
-        if (!stored) applyTheme(e.matches ? 'dark' : 'light');
-      } catch (err) {}
-    });
-  }
-})();
-</script>
-  
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {% include head.html %}
-</head>
 
 <body id="top">
 
@@ -75,6 +17,34 @@
   <div id="bottom"></div>
 
   {% include analytics.html %}
+
+  <script>
+  (function () {
+    const btn = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-toggle-icon');
+    if (!btn || !icon) return;
+
+    function applyTheme(t) {
+      document.documentElement.classList.toggle('dark', t === 'dark');
+      btn.setAttribute('aria-pressed', t === 'dark');
+      icon.textContent = t === 'dark' ? '🌙' : '☀️';
+    }
+
+    function currentTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored === 'dark' || stored === 'light') return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    applyTheme(currentTheme());
+
+    btn.addEventListener('click', function () {
+      const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  })();
+  </script>
 
 </body>
 </html>
