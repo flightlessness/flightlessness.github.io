@@ -12,6 +12,10 @@ main {
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .theme-icon,
 .rss-icon {
   width: 32px;
