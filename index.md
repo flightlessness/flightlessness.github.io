@@ -11,14 +11,14 @@ permalink: /
   {% for post in latest_posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
-      <small>
-        {{ post.date | date: "%b %-d, %Y" }}
-      </small>
+      <small>{{ post.date | date: "%b %-d, %Y" }}</small>
     </li>
   {% endfor %}
 </ul>
 
-<h2>Categories</h2>
+<h2>
+  <a href="{{ '/categories/' | relative_url }}">Categories</a>
+</h2>
 
 <ul class="category-menu">
   {% assign types = site.posts | map: "type" | uniq | compact %}
