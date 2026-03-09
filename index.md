@@ -21,10 +21,10 @@ permalink: /
 <h2>Categories</h2>
 
 <ul class="category-menu">
-  <li><a href="/test/">Test</a></li>
-  <li><a href="/image/">Image</a></li>
+  {% assign types = site.posts | map: "type" | uniq | compact %}
+  {% for type in types %}
+    <li>
+      <a href="/{{ type }}/">{{ type | capitalize }}</a>
+    </li>
+  {% endfor %}
 </ul>
-
-{% for post in site.posts %}
-- [{{ post.title }}]({{ post.url }})
-{% endfor %}
