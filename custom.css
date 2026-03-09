@@ -16,6 +16,11 @@ html {
   scroll-behavior: smooth;
 }
 
+h2 a {
+  color: inherit;          /* use same color as heading */
+  text-decoration: none;   /* remove underline */
+}
+
 .theme-icon,
 .rss-icon {
   width: 32px;
