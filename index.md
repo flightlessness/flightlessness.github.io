@@ -21,7 +21,15 @@ permalink: /
 </h2>
 
 <ul class="category-menu">
-  {% assign types = site.posts | map: "type" | uniq | compact %}
+  <ul class="category-menu">
+  {% for category in site.categories %}
+    <li>
+      <a href="/{{ category[0] }}/">
+        {{ category[0] | capitalize }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
   {% for type in types %}
     <li>
       <a href="/{{ type }}/">{{ type | capitalize }}</a>
