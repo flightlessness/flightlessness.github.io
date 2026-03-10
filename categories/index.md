@@ -7,10 +7,11 @@ permalink: /categories/
 <h1>Categories</h1>
 
 <ul>
-  {% assign types = site.posts | map: "type" | uniq | compact %}
-  {% for type in types %}
+  {% for category in site.categories %}
     <li>
-      <a href="/{{ type }}/">{{ type | capitalize }}</a>
+      <a href="/{{ category[0] }}/">
+        {{ category[0] | capitalize }}
+      </a>
     </li>
   {% endfor %}
 </ul>
