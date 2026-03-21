@@ -30,22 +30,15 @@ paginate: 10
 <h1>{{ page.title }}</h1>
 
 {% assign category_name = page.title | downcase %}
+{% assign posts = site.categories[category_name] %}
 
-{% assign posts = site.posts
-  | where: "type", category_name
-  | sort: "date"
-  | reverse %}
-
-{% if posts.size > 0 %}
+{% if posts and posts != empty %}
+  {% assign posts = posts | sort: "date" | reverse %}
   <ul class="post-list">
     {% for post in posts %}
       <li class="post-item">
-        <a class="post-title" href="{{ post.url }}">
-          {{ post.title }}
-        </a>
-        <small class="post-date">
-          {{ post.date | date: "%b %-d, %Y" }}
-        </small>
+        <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+        <small class="post-date">{{ post.date | date: "%b %-d, %Y" }}</small>
       </li>
     {% endfor %}
   </ul>

@@ -7,10 +7,13 @@ permalink: /categories/
 <h1>Categories</h1>
 
 <ul>
-  {% for category in site.categories %}
+  {% assign sorted_categories = site.categories | sort %}
+  {% for category in sorted_categories %}
+    {% assign name = category[0] %}
+    {% assign posts = category[1] %}
     <li>
-      <a href="/{{ category[0] }}/">
-        {{ category[0] | capitalize }}
+      <a href="/{{ name | uri_escape }}/">
+        {{ name | capitalize }} ({{ posts | size }})
       </a>
     </li>
   {% endfor %}
