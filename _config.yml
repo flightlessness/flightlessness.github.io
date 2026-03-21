@@ -1,2 +1,6 @@
+title: flightlessness
+description: Personal blog
+
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
