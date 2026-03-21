@@ -1,0 +1,148 @@
+body {
+  font-size: 36px;
+  line-height: 1.7;
+}
+
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.6em; }
+h3 { font-size: 1.3em; }
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h2 a {
+  color: inherit;          /* use same color as heading */
+  text-decoration: none;   /* remove underline */
+}
+
+.theme-icon,
+.rss-icon {
+  width: 32px;
+  height: 32px;
+  stroke-width: 3;
+}
+
+.theme-toggle {
+  outline: none;
+}
+
+.theme-toggle:focus {
+  outline: none;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid #ff6600;   /* or a softer color */
+  outline-offset: 2px;
+}
+
+.site-nav a,
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-footer a:hover {
+  opacity: 0.7;
+}
+
+/* color system: define variables for light mode */
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --link: #1a73e8;
+  --accent: #ff6600; /* your RSS color previously */
+  --site-max-width: 720px;
+
+  --transition-fast: 180ms ease;
+}
+
+/* dark mode variables when .dark on <html> */
+html.dark {
+  --bg: #0b0b0d;
+  --text: #eaeaea;
+  --muted: #9a9a9a;
+  --link: #8ab4ff;
+  --accent: #ff9a41;
+}
+
+/* apply */
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+/* preserve your existing layout values but use variables */
+main {
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+}
+
+/* links */
+a { color: var(--link); }
+a:hover { opacity: 0.85; }
+
+/* small utility for icon alignment */
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.theme-toggle:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* optional: make toggle slightly smaller in footer */
+.footer .theme-toggle { font-size: 0.95rem; }
+
+/* keep transitions subtle for themeable properties */
+* { transition: color var(--transition-fast) , background var(--transition-fast) ; }
+
+.site-nav {
+  display: flex;
+  gap: 0.6rem;
+  padding: 1rem;
+}
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-card {
+  margin-bottom: 1.4rem;
+}
+
+.site-footer {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  color: #666;
+}
+
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Light mode */
+.rss-icon {
+  color: #000000;
+}
+
+/* Dark mode */
+html.dark .rss-icon {
+  color: #ffffff;
+}
