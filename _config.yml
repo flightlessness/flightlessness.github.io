@@ -1,5 +1,6 @@
 title: flightlessness
 description: Personal blog
+url: https://flightlessness.github.io
 
 plugins:
   - jekyll-feed
