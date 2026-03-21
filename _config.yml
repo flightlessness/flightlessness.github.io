@@ -1,8 +1,6 @@
 title: flightlessness
 description: Personal blog
 
-google_site_verification: 1Et5T3C30B0xCnh1YNlxT8nKg1PLag7sCoqm62aGLcg
-
 plugins:
   - jekyll-feed
   - jekyll-sitemap
