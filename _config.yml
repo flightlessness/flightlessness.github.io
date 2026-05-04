@@ -1,6 +1,11 @@
 title: flightlessness
 description: Personal blog
 
+collections:
+  books:
+    output: true
+    permalink: /books/:name/
+    
 plugins:
   - jekyll-feed
   - jekyll-sitemap
