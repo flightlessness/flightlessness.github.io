@@ -1,1 +1,20 @@
+---
+layout: default
+---
 
+<article class="book-detail">
+  <img class="book-cover" src="{{ page.cover | relative_url }}" alt="{{ page.title }}">
+
+  <div>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.author }}</p>
+
+    <div class="book-content">
+      {{ content }}
+    </div>
+
+    {% if page.download %}
+      <a class="download-button" href="{{ page.download }}">Download</a>
+    {% endif %}
+  </div>
+</article>
